@@ -1,0 +1,284 @@
+/* Основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 30px;
+    position: relative;
+}
+
+/* Заголовок */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #2c7bbf;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Слайды */
+.slides-container {
+    min-height: 550px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.slide {
+    display: none;
+    padding: 25px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    animation: fadeIn 0.5s ease;
+}
+
+.slide.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    color: #2c7bbf;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+    font-size: 24px;
+}
+
+/* Контент слайдов */
+.content {
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.content h3 {
+    color: #2c3e50;
+    margin: 15px 0 10px 0;
+    font-size: 18px;
+}
+
+/* Списки */
+ul, ol {
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* Формулы */
+.formula {
+    background: #f8f9fa;
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-left: 4px solid #2c7bbf;
+    font-family: 'Courier New', monospace;
+    font-size: 17px;
+    border-radius: 5px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.formula sup {
+    font-size: 14px;
+}
+
+/* Примеры */
+.example {
+    background: #e8f4fc;
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 6px;
+    border-left: 4px solid #3498db;
+}
+
+.example strong {
+    color: #2c3e50;
+}
+
+/* Примечания */
+.note {
+    background: #fff9e6;
+    padding: 15px;
+    margin: 15px 0;
+    border-left: 4px solid #f39c12;
+    border-radius: 5px;
+}
+
+/* Таблицы */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+th {
+    background: #2c7bbf;
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: bold;
+}
+
+td {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+/* Заключение */
+.conclusion {
+    text-align: center;
+    margin-top: 30px;
+    padding: 25px;
+    background: #e8f7f0;
+    border-radius: 8px;
+    border: 1px solid #c3e6cb;
+}
+
+.conclusion h3 {
+    color: #155724;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* Номер слайда */
+.slide-number {
+    text-align: right;
+    color: #777;
+    font-style: italic;
+    margin-top: 20px;
+    font-size: 14px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+/* Управление */
+.controls {
+    text-align: center;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin: 25px 0;
+    border: 1px solid #e0e0e0;
+}
+
+.counter {
+    display: inline-block;
+    margin: 0 25px;
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 16px;
+}
+
+button {
+    background: #2c7bbf;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+    min-width: 120px;
+}
+
+button:hover {
+    background: #1a5a9a;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    color: #777;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+    .slide {
+        padding: 15px;
+    }
+    
+    button {
+        padding: 10px 15px;
+        font-size: 14px;
+        min-width: 100px;
+    }
+    
+    .counter {
+        margin: 0 15px;
+        font-size: 14px;
+    }
+    
+    table {
+        font-size: 12px;
+    }
+    
+    .formula {
+        font-size: 15px;
+        padding: 12px;
+        overflow-x: auto;
+    }
+}
